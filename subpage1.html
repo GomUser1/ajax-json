@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Georgios Pseiridis - Pseiras  </title>
+ <link rel="stylesheet" href="style.css" />
+<script>
+
+
+function basic(){
+	var results = document.getElementById("results");
+    var hr = new XMLHttpRequest();
+	
+	
+    hr.open("GET", "jsonfile.json", true);
+	//application json, asynchronous=true
+    hr.setRequestHeader("Content-type", "application/json", true);
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var people = JSON.parse(hr.responseText);
+			results.innerHTML = "";
+			for(var i in people){
+				results.innerHTML += people[i].name+" is "+people[i].age+" years old <hr />";
+			}
+	    }
+    }
+    hr.send(null);
+    results.innerHTML = "data loading...";
+}
+
+
+</script>
+</head>
+<body>
+
+<ul>
+  <li><a  href="index.html">Main</a></li>
+  <li><a class="active" href="#">Basic information</a></li>
+  <li><a href="subpage2.html">More details</a></li>
+
+</ul>
+<center>
+<form>
+<h1>
+ Basic information  </h1>
+<br>
+<input type="button" value="Just show me names and age " onclick="basic()">
+
+ 
+</form>
+</center>
+
+<div id="results">
+
+
+</div>
+
+</body>
+</html>

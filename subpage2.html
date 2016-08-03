@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Georgios Pseiridis - Pseiras  </title>
+ <link rel="stylesheet" href="style.css" />
+<script>
+
+function detailed(){
+	var results = document.getElementById("results");
+    var hr = new XMLHttpRequest();
+    hr.open("GET", "jsonfile.json", true);
+    hr.setRequestHeader("Content-type", "application/json", true);
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var people = JSON.parse(hr.responseText);
+			results.innerHTML = "";
+			for(var i in people){
+					
+				results.innerHTML += "<ul><li>"+"<b>"+ people[i].name+" </b> is a " +people[i].gender+" and works at  "+people[i].company+ ". The user's mail is: "+
+				people[i].email + "and phone number is: " + people[i].phone +". The person's eye colour is:   "+ people[i].eyeColor + " and lives in: "+ people[i].address +" </li><ul> ";
+			}
+	    }
+    }
+    hr.send(null);
+    results.innerHTML = "data loading...";
+}
+
+</script>
+
+
+</head>
+<body>
+
+<ul>
+  <li><a  href="index.html">Main</a></li>
+  <li><a  href="subpage1.html">Basic information</a></li>
+  <li><a class="active" href="#">More details</a></li>
+
+</ul>
+<center>
+
+<form>
+<h1>  Detailed information </h1>
+
+<br>
+
+<input type="button" value="Show more detailed info!"  onclick="detailed()">
+ 
+</form>
+</center>
+
+<div id="results">
+
+
+</div>
+
+</body>
+</html>
