@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+
+function basic(){
+	var results = document.getElementById("results");
+    var hr = new XMLHttpRequest();
+	
+	
+    hr.open("GET", "jsonfile.json", true);
+	//application json, asynchronous=true
+    hr.setRequestHeader("Content-type", "application/json", true);
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var people = JSON.parse(hr.responseText);
+			results.innerHTML = "";
+			for(var i in people){
+				results.innerHTML += people[i].name+" is "+people[i].age+" years old <hr />";
+			}
+	    }
+    }
+    hr.send(null);
+    results.innerHTML = "data loading...";
+}
+
+
+function detailed(){
+	var results = document.getElementById("results");
+    var hr = new XMLHttpRequest();
+    hr.open("GET", "jsonfile.json", true);
+    hr.setRequestHeader("Content-type", "application/json", true);
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var people = JSON.parse(hr.responseText);
+			results.innerHTML = "";
+			for(var i in people){
+					
+				results.innerHTML += "<ul><li>"+people[i].name+" is a " +people[i].gender+" and works at  "+people[i].company+ ". The user's mail is: "+
+				people[i].email + "and phone number is: " + people[i].phone +". The person's eye colour is:   "+ people[i].eyeColor + " and lives in: "+ people[i].address +" </li><ul> ";
+			}
+	    }
+    }
+    hr.send(null);
+    results.innerHTML = "data loading...";
+}
+
+</script>
+</head>
+<body>
+<center>
+<form>
+<h1>
+ Click the buttons to display the users information </h1>
+<br>
+<input type="button" value="Show names and age " onclick="basic()">
+<input type="button" value="Show more information!"  onclick="detailed()">
+ 
+</form>
+</center>
+
+<div id="results">
+
+</div>
+
+</body>
+</html>

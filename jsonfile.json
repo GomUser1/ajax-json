@@ -1,0 +1,62 @@
+[
+  {
+    "age": 32,
+    "eyeColor": "brown",
+    "name": "Jeri Beck",
+    "gender": "female",
+    "company": "DIGIRANG",
+    "email": "jeribeck@digirang.com",
+    "phone": "+1 (828) 527-2851",
+    "address": "473 Cameron Court, Englevale, Nevada, 487"
+  },
+  {
+    "age": 26,
+    "eyeColor": "green",
+    "name": "Hoffman Farrell",
+    "gender": "male",
+    "company": "SCENTRIC",
+    "email": "hoffmanfarrell@scentric.com",
+    "phone": "+1 (885) 462-3586",
+    "address": "862 Anchorage Place, Edgar, Georgia, 919"
+  },
+  {
+    "age": 39,
+    "eyeColor": "blue",
+    "name": "Mallory Bonner",
+    "gender": "female",
+    "company": "XSPORTS",
+    "email": "mallorybonner@xsports.com",
+    "phone": "+1 (885) 570-3397",
+    "address": "103 Main Street, Crucible, Ohio, 1541"
+  },
+  {
+    "age": 39,
+    "eyeColor": "green",
+    "name": "Carr Morgan",
+    "gender": "male",
+    "company": "MOTOVATE",
+    "email": "carrmorgan@motovate.com",
+    "phone": "+1 (875) 489-3785",
+    "address": "985 Durland Place, Cataract, Louisiana, 1749"
+  },
+  {
+    "age": 30,
+    "eyeColor": "blue",
+    "name": "Ferrell Roy",
+    "gender": "male",
+    "company": "SPLINX",
+    "email": "ferrellroy@splinx.com",
+    "phone": "+1 (961) 522-3445",
+    "address": "134 Fountain Avenue, Whitewater, Oregon, 3576"
+  },
+  {
+    "age": 36,
+    "eyeColor": "blue",
+    "name": "Regina Gaines",
+    "gender": "female",
+    "company": "VIAGREAT",
+    "email": "reginagaines@viagreat.com",
+    "phone": "+1 (918) 579-3341",
+    "address": "325 Bevy Court, Terlingua, Massachusetts, 6164"
+  }
+]
